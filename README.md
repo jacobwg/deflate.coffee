@@ -1,9 +1,11 @@
 # deflate.coffee
 
-This library will provide a coffeescript implementation of the RFC 1951 deflate algorithm.
-
-It is in progress.  The initial version will be based on [Gzip](http://www.gzip.org/).
+**Work in Progress:** This library will provide a coffeescript implementation of the RFC 1951 deflate algorithm.
 
 ## Compiling
 
 To compile, run `coffee -c *.coffee`
+
+## Credits
+
+The original code was directly copied from [js-deflate](https://github.com/dankogai/js-deflate).

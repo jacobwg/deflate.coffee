@@ -418,7 +418,7 @@
     h = new zip_HuftBuild(ll, nl, 257, zip_cplens, zip_cplext, zip_bl)
     h.status = 1  if zip_bl is 0
     unless h.status is 0
-      #  if h.status is 1
+      # if h.status is 1, incomplete literal tree
       return -1
     zip_tl = h.root
     zip_bl = h.m
@@ -431,7 +431,7 @@
     zip_td = h.root
     zip_bd = h.m
     return -1  if zip_bd is 0 and nl > 257
-    #  if h.status is 1
+    # if h.status is 1 incomplete distance tree
     return -1  unless h.status is 0
     zip_inflate_codes buff, off_, size
 
@@ -517,6 +517,6 @@
     zip_inflate_data = null
     aout.join ""
 
-  RawDeflate = {}  unless window.RawDeflate
-  RawDeflate.inflate = zip_inflate
+  window.RawDeflate = {}  unless window.RawDeflate
+  window.RawDeflate.inflate = zip_inflate
 )()
